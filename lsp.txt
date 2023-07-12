@@ -1,0 +1,128 @@
+
+<linux system programing>
+
+//-----------------------------------------------------------------------------
+
+
+system call -> interface between user space and kernel space
+
+- fork and its family
+	-> pthread and its use, different variants, parameter passing etc
+- file operation and IO handling unbuffered
+	-> file operations using buffered call like fopen, fwrite, fread, fseek, ftell, rewind
+- reading and writing to console as well as file
+- buffered IO vs unbuffered IO
+- socket programming
+- semaphores, mutexes and how to make a program thread safe
+- how to write a producer, consumer application
+- directory and file navigation
+- signal handling, alarm signals, kill process signal
+
+//-----------------------------------------------------------------------------
+
+> alarm
+
+- <signal.h> for signals in c
+- to check how much time a binary took, run
+	$ time ./a.out
+
+- always exit from signal handler
+- signal must be handled, otherwise the process gets killed by the signal
+- all the signal's can be caught except for one, signal 9 (kill -9) cannot
+be caught
+- to see signal numbers, run
+	$ kill -l
+	$ man 7 signal
+- run,
+	$ man alarm
+
+//-----------------------------------------------------------------------------
+
+> ls
+
+- DIR *dp; // opaque data type for directory stream
+- struct dirent *direntry; // struct which contains file info like name, inode, 
+								offset etc,.
+
+- struct dirent definition at /usr/include/x86_64-linux-gnu/bits/dirent.h
+
+- opendir(<location>); // to open directory
+- strerror(errno); // strerror function to convert error number to error name
+				   // by default error(errno) are int
+- readdir(<directory that is opened by above function>); // read directory info
+
+- $ find <location> // recursively list the directory
+- $ ls // list the directory
+
+
+
+//-----------------------------------------------------------------------------
+
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
